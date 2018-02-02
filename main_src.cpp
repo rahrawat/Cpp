@@ -26,7 +26,13 @@ class airthmatic : public object
 
 };
 
-
+template <class T>
+void getmax(T a, T b)
+{
+	T res;
+	res=(a>b)?a:b;
+	cout<<endl<<res<<" is bigger\n";
+}
 int main()
 {
         object** o = new object*[2];
@@ -36,6 +42,15 @@ int main()
         o[0]->show ();  // Dynamic dispatch - run time polymorphisms 
         a.add (9,11,23);
         o[0]->show ();
+	
+
+
+
+	getmax<int>(1,8);
+	getmax<float>(19.3,8.4);
+	getmax<char>('q','w');
+
+	
 	return 0;
 }
 
